@@ -48,7 +48,7 @@
 
 
   function Celsius(valor) {
-    Temperatura.call (this, valor, 'C');
+    Temperatura.call (this, valor, 'Celsius');
   }
 
   Celsius.prototype = new Temperatura();
@@ -58,9 +58,8 @@
       return (this.valor * 1.8 + 32);
   }
 
-  function Farenheit(valor)
-  {
-
+  function Farenheit(valor) {
+    Temperatura.call (this, valor, "Farenheit");
   }
 
   exports.Temperatura = Temperatura;
