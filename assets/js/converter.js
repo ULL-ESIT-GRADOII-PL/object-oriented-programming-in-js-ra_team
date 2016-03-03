@@ -56,7 +56,11 @@
   Celsius.prototype.constructor = Celsius;
 
   Celsius.prototype.toFarenheit = function () {
-      return (this.valor * 1.8 + 32);
+    return (this.valor * 1.8 + 32);
+  }
+
+  Celsius.prototype.toKelvin = function () {
+    return (this.valor + 273.15);
   }
 
   function Farenheit(valor) {
