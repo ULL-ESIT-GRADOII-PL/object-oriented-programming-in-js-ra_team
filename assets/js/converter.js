@@ -83,6 +83,10 @@
     return (this.valor - 273.15);
   }
 
+  Kelvin.prototype.toFarenheit = function (){
+    return ((this.valor * 1.8) - 459.67);
+  }
+
 
 
 
