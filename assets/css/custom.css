@@ -10,6 +10,7 @@ body {
 
 footer {
     position: fixed;
+    z-index : 2;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -29,6 +30,7 @@ footer a:hover {
 
 header {
     position: fixed;
+    z-index : 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -62,5 +64,6 @@ span {
 
     header {
         text-align: center;
+        font-family: "Ubuntu";
     }
 }
