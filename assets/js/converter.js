@@ -68,7 +68,7 @@
       case 'f':
          return this.toFarenheit() + " Farenheit";
       case 'k':
-         return this.toKelvin();
+         return this.toKelvin() + " Kelvin";
       default:
          window.alert ("Output type it's strange..");
     }
@@ -90,6 +90,18 @@
   Farenheit.prototype.toKelvin = function () {
     return (5 * (this.valor - 32) / 9) + 273.15;
   }
+
+  Farenheit.prototype.to = function (outputType) {
+    switch (outputType) {
+      case 'c':
+         return this.toCelsius() + " Celsius";
+      case 'k':
+         return this.toKelvin() + " Kelvin";
+      default:
+         window.alert ("Output type it's strange..");
+    }
+  }
+
 
   function Kelvin (valor) {
     Temperatura.call (this, valor, "Kelvin");
