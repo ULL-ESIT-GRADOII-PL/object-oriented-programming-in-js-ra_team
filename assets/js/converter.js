@@ -66,9 +66,9 @@
   Farenheit.prototype = new Temperatura();
   Farenheit.prototype.constructor = Farenheit;
 
-//  Farenheit.prototype.toCelsius = function () {
-
-//  }
+  Farenheit.prototype.toCelsius = function () {
+    return (this.valor - 32) * 5 / 9;
+  }
 
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
