@@ -35,9 +35,9 @@
             /* Extienda la RegeExp a la especificación. use una XRegExp */
 
         expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-                                '(?<input>    [fkcmlFKCML])[ ]*                                       # inputTemp \n' +
+                                '(?<input>    [fkcml])[ ]*                                       # inputTemp \n' +
                                 '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
-                                '(?<output>    [fkcmlFKCML])[ ]*                                       # outputTemp','x');
+                                '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i');
 
         valor = XRegExp.exec(valor, expresion);
 
