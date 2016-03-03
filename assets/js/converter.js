@@ -1,3 +1,4 @@
+
 (function(exports) {
   "use strict";
 
@@ -24,7 +25,9 @@
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
 
-  exports.convert = function() {
+  exports.convertir = function() {
+  //  var XRegExp = require('xregexp');
+
     var valor     = document.getElementById('convert').value,
         elemento  = document.getElementById('converted'),
         /* Extienda la RegeExp a la especificación. use una XRegExp */
