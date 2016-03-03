@@ -21,6 +21,15 @@ footer a:hover {
   color: #FFFFFF;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #339612;
+}
+
 .app {
     margin-top: 10%;
 }
@@ -35,6 +44,10 @@ span {
 
 @media (max-width: 550px) {
     footer {
+        text-align: center;
+    }
+
+    header {
         text-align: center;
     }
 }
