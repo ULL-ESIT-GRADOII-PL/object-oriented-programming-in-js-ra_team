@@ -7,13 +7,13 @@
   {
     /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */
         if(!tipo){
-          var expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-                                  '(?<tipo>    [fkcml])[ ]*                                       # inputTemp \n','x' + 'i');
+        //  var expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
+        //                          '(?<tipo>    [fkcml])[ ]*                                       # inputTemp \n','x' + 'i');
 
-          var valor = XRegExp.exec(valor, expresion);
+//          var valor = XRegExp.exec(valor, expresion);
 
-          this.valor = valor.num;
-          this.tipo = valor.tipo;
+      //    this.valor = valor.num;
+      //    this.tipo = valor.tipo;
         }
         /* ademas de new Medida(45.2, "Km") */
         else{
@@ -75,22 +75,16 @@
         expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
                                 '(?<input>    [fkcml])[ ]*                                       # inputTemp \n' +
                                 '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
-                                '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i');
+                                '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i'),
 
         valor = XRegExp.exec(valor, expresion);
 
 
-      if (valor) {
-       var inputTemp = new Medida(valor.num, valor.input);
+      if (valor.length == 6) {
 
-       var tipo   = valor.output;
-
-       //numero = parseFloat(numero);
-       console.log("Valor: " + valor.input);
-
-       switch (tipo) {
+       switch (valor.input) {
          case 'c':
-           var celsius = new Celsius(numero);
+           var celsius = new Celsius(valor.num);
            elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
            break;
          case 'f':
@@ -103,6 +97,6 @@
        }
      }
     else
-      elemento.innerHTML = "";
+      elemento.innerHTML = "MAL";
   };
 })(this);
