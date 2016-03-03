@@ -70,10 +70,17 @@
     return (this.valor - 32) * 5 / 9;
   }
 
+  function Kelvin (valor) {
+    Temperatura.call (this, valor, "Kelvin");
+  }
+
+
+
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
-
+  exports.Kelvin = Kelvin;
+  
   exports.convert = function() {
         var valor     = document.getElementById('convert').value,
         elemento  = document.getElementById('converted'),
