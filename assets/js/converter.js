@@ -29,6 +29,11 @@
     return this.valor;
   }
 
+  Medida.prototype.getType = function () {
+    return this.type;
+  }
+
+
 
   function Temperatura(valor,tipo)
   {
