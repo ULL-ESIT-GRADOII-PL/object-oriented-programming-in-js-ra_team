@@ -25,6 +25,10 @@
     /* ademas de new Medida(45.2, "Km") */
   }
 
+  Medida.prototype.getValue = function () {
+    return this.valor;
+  }
+
 
   function Temperatura(valor,tipo)
   {
