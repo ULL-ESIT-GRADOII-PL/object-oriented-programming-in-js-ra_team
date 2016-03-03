@@ -77,6 +77,12 @@
 
   // There we set the inheritance
   Kelvin.prototype = new Temperatura ();
+  Kelvin.prototype.constructor = Kelvin;
+
+  Kelvin.prototype.toCelsius = function () {
+    return (this.valor - 273.15);
+  }
+
 
 
 
