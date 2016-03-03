@@ -63,6 +63,18 @@
     return (this.valor + 273.15);
   }
 
+  Celsius.prototype.to = function (outputType) {
+    switch (outputType) {
+      case 'f':
+         return this.toFarenheit() + " Farenheit";
+      case 'k':
+         return this.toKelvin();
+      default:
+         window.alert ("Output type it's strange..");
+    }
+  }
+
+
   function Farenheit(valor) {
     Temperatura.call (this, valor, "Farenheit");
   }
@@ -76,7 +88,7 @@
   }
 
   Farenheit.prototype.toKelvin = function () {
-    return (5 * (this.valor - 32) / 9) + 273.15);
+    return (5 * (this.valor - 32) / 9) + 273.15;
   }
 
   function Kelvin (valor) {
@@ -121,7 +133,8 @@
        switch (valor.input) {
          case 'c':
            var celsius = new Celsius(valor.num);
-           elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
+           elemento.innerHTML = celsius.to (valor.output);
+        //   elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
            break;
          case 'f':
            var farenheit = new Farenheit(numero);
