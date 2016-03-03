@@ -75,6 +75,10 @@
     return (this.valor - 32) * 5 / 9;
   }
 
+  Farenheit.prototype.toKelvin = function () {
+    return (5 * (this.valor - 32) / 9) + 273.15);
+  }
+
   function Kelvin (valor) {
     Temperatura.call (this, valor, "Kelvin");
   }
