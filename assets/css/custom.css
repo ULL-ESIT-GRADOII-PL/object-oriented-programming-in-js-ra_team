@@ -2,6 +2,11 @@ html {
     background-color: #A1D490;
 }
 
+body {
+  font-size: medium;
+  font-family:Georgia, 'Palatino', 'Palatino Linotype', Times, 'Times New Roman', serif;
+}
+
 
 footer {
     position: fixed;
@@ -10,6 +15,7 @@ footer {
     width: 100%;
     padding: 10px;
     background-color: #339612;
+    font-family: "Ubuntu";
 }
 
 footer a {
@@ -26,8 +32,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
     background-color: #339612;
+    padding: 15px 15px;
+    display: center;
+    height: 60px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .app {
@@ -36,6 +45,9 @@ header {
 
 h4 {
     font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Ubuntu";
 }
 
 span {
@@ -45,6 +57,7 @@ span {
 @media (max-width: 550px) {
     footer {
         text-align: center;
+        font-family: "Ubuntu";
     }
 
     header {
