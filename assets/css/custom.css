@@ -1,5 +1,5 @@
 html {
-    background-color: #eee;
+    background-color: #A1D490;
 }
 
 
@@ -9,12 +9,16 @@ footer {
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: #222;
+    background-color: #339612;
 }
 
 footer a {
-    color: #FFF;
+    color: #000000;
     text-decoration: none;
+}
+
+footer a:hover {
+  color: #FFFFFF;
 }
 
 .app {
