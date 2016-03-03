@@ -42,6 +42,12 @@
     Medida.call (this, valor, tipo);
   }
 
+  // There we set the inheritance
+  Temperatura.prototype = new Medida ();
+  Temperatura.prototype.constructor = Temperatura;
+
+
+
   function Celsius(valor)
   {
   }
