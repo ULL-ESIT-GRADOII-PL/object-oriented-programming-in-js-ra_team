@@ -51,6 +51,7 @@
     Temperatura.call (this, valor, 'Celsius');
   }
 
+  // There we set the inheritance
   Celsius.prototype = new Temperatura();
   Celsius.prototype.constructor = Celsius;
 
@@ -61,6 +62,13 @@
   function Farenheit(valor) {
     Temperatura.call (this, valor, "Farenheit");
   }
+
+  Farenheit.prototype = new Temperatura();
+  Farenheit.prototype.constructor = Farenheit;
+
+//  Farenheit.prototype.toCelsius = function () {
+
+//  }
 
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
