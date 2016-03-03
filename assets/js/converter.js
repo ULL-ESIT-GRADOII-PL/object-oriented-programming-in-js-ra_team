@@ -137,36 +137,33 @@
   exports.Kelvin = Kelvin;
 
   exports.convert = function() {
-        var valor     = document.getElementById('convert').value,
-        elemento  = document.getElementById('converted'),
-            /* Extienda la RegeExp a la especificación. use una XRegExp */
+      var valor     = document.getElementById('convert').value,
+      elemento  = document.getElementById('converted'),
+      expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
+                          '(?<input>    [fkcml])[ ]*                                       # inputTemp \n' +
+                          '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
+                          '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i'),
 
-        expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-                                '(?<input>    [fkcml])[ ]*                                       # inputTemp \n' +
-                                '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
-                                '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i'),
-
-        valor = XRegExp.exec(valor, expresion);
-
-
+      valor = XRegExp.exec(valor, expresion);
       if (valor.length == 6) {
 
        switch (valor.input) {
          case 'c':
            var celsius = new Celsius(valor.num);
            elemento.innerHTML = celsius.to (valor.output);
-        //   elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
            break;
          case 'f':
-           var farenheit = new Farenheit(numero);
-           elemento.innerHTML = farenheit.toCelsius().toFixed(2) + " Celsius";
+           var farenheit = new Farenheit(valor.num);
+           elemento.innerHTML = farenheit.to (valor.output);
            break;
-
+         case 'k':
+           var kelvin = new Kelvin (valor.num);
+           elemento.innerHTML = kelvin.to (valor.output);
          default:
-          /* rellene este código */
+           window.alert ("The input value is very strange for me..");
        }
      }
     else
-      elemento.innerHTML = "MAL";
+      elemento.innerHTML = "";
   };
 })(this);
