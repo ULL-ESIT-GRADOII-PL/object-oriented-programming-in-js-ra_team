@@ -119,7 +119,16 @@
     return ((this.valor * 1.8) - 459.67);
   }
 
-
+  Kelvin.prototype.to = function (outputType) {
+    switch (outputType) {
+      case 'c':
+         return this.toCelsius() + " Celsius";
+      case 'f':
+         return this.toFarenheit() + " Farenheit";
+      default:
+         window.alert ("Output type it's strange..");
+    }
+  }
 
 
   exports.Temperatura = Temperatura;
