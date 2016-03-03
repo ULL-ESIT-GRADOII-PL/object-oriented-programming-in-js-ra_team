@@ -25,6 +25,8 @@
     /* ademas de new Medida(45.2, "Km") */
   }
 
+  Medida.prototype.constructor = Medida;
+
   Medida.prototype.getValue = function () {
     return this.valor;
   }
@@ -37,7 +39,7 @@
 
   function Temperatura(valor,tipo)
   {
-    /* tipo es opcional. Debería admitir new Medida("45.2 F") */
+    //Medida.call (this, valor, tipo);
   }
 
   function Celsius(valor)
