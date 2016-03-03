@@ -47,13 +47,20 @@
   Temperatura.prototype.constructor = Temperatura;
 
 
+  function Celsius(valor) {
+    Temperatura.call (this, valor, 'C');
+  }
 
-  function Celsius(valor)
-  {
+  Celsius.prototype = new Temperatura();
+  Celsius.prototype.constructor = Celsius;
+
+  Celsius.prototype.toFarenheit = function () {
+      return (this.valor * 1.8 + 32);
   }
 
   function Farenheit(valor)
   {
+
   }
 
   exports.Temperatura = Temperatura;
