@@ -63,6 +63,7 @@
     Temperatura.call (this, valor, "Farenheit");
   }
 
+  // There we set the inheritance
   Farenheit.prototype = new Temperatura();
   Farenheit.prototype.constructor = Farenheit;
 
@@ -74,13 +75,16 @@
     Temperatura.call (this, valor, "Kelvin");
   }
 
+  // There we set the inheritance
+  Kelvin.prototype = new Temperatura ();
+
 
 
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
   exports.Kelvin = Kelvin;
-  
+
   exports.convert = function() {
         var valor     = document.getElementById('convert').value,
         elemento  = document.getElementById('converted'),
