@@ -149,8 +149,7 @@
   Meters.prototype.constructor = Meters;
 
   Meters.prototype.toInches = function () {
-    window.alert (this.value);
-    return (this.value * 39.3701);
+    return (this.valor * 39.3701);
   }
 
   function Inches (valor) {
@@ -161,7 +160,7 @@
   Inches.prototype.constructor = Inches;
 
   Inches.prototype.toMeters = function () {
-    return (this.value / 39.3701);
+    return (this.valor / 39.3701);
   }
 
 
