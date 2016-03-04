@@ -184,7 +184,7 @@
 
       valor = XRegExp.exec(valor, expresion);
       if (valor.length == 6) {
-       switch (valor.input) {
+       switch (valor.input.toLowerCase()) {
          case 'c':  // CELSIUS TO X
            var celsius = new Celsius (parseFloat (valor.num));
            elemento.innerHTML = celsius.to (valor.output);
@@ -196,12 +196,15 @@
          case 'k': // KELVIN TO X
            var kelvin = new Kelvin (parseFloat (valor.num));
            elemento.innerHTML = kelvin.to (valor.output);
+           break;
          case 'm':  // METERS TO X
            var meters = new Meters (valor.num);
            elemento.innerHTML = meters.toInches () + " Inches";
+           break;
          case 'i':  // INCES TO X
            var inches = new Inches (valor.num);
            elemento.innerHTML = inches.toMeters () + " Meters";
+           break;
          default:
            window.alert ("The input value is very strange for me..");
        }
