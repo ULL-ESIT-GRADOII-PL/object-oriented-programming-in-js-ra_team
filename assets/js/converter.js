@@ -142,6 +142,12 @@
   Longitud.prototype.constructor = Longitud;
 
 
+  function Metros (valor) {
+    Longitud.call (this, valor, "Metros");
+  }
+
+  Metros.prototype = new Longitud ();
+  Metros.prototype.constructor = Metros;
 
 
   exports.Temperatura = Temperatura;
