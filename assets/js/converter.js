@@ -131,6 +131,19 @@
   }
 
 
+
+  function Longitud(valor,tipo)
+  {
+    Medida.call (this, valor, tipo);
+  }
+
+  // There we set the inheritance
+  Longitud.prototype = new Medida ();
+  Longitud.prototype.constructor = Longitud;
+
+
+
+
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
