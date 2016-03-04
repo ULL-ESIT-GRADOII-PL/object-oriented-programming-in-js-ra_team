@@ -141,7 +141,6 @@
   Longitud.prototype = new Medida ();
   Longitud.prototype.constructor = Longitud;
 
-
   function Meters (valor) {
     Longitud.call (this, valor, "Meters");
   }
@@ -150,11 +149,12 @@
   Meters.prototype.constructor = Meters;
 
   Meters.prototype.toInches = function () {
+    window.alert (this.value);
     return (this.value * 39.3701);
   }
 
   function Inches (valor) {
-    Longitud.call (this,valor, "Inches");
+    Longitud.call (this, valor, "Inches");
   }
 
   Inches.prototype = new Longitud ();
@@ -164,8 +164,6 @@
     return (this.value / 39.3701);
   }
 
-
-  exports.Medida = Medida;
 
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
@@ -177,16 +175,15 @@
   exports.Inches = Inches;
 
   exports.convert = function() {
-      var valor     = document.getElementById('convert').value,
+      var valor = document.getElementById('convert').value,
       elemento  = document.getElementById('converted'),
-      expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-                          '(?<input>    [fkcmi])[ ]*                                       # inputTemp \n' +
-                          '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
-                          '(?<output>    [fkcmi])[ ]*                                       # outputTemp','x' + 'i'),
+      expresion = XRegExp('(?<num>      [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
+                          '(?<input>    [fkcmi])[ ]*                                           # inputTemp    \n' +
+                          '(?<to>       (?:to)?)[ ]*                                           # to           \n' +
+                          '(?<output>   [fkcmi])[ ]*                                           # outputTemp', 'x' + 'i'),
 
       valor = XRegExp.exec(valor, expresion);
       if (valor.length == 6) {
-
        switch (valor.input) {
          case 'c':  // CELSIUS TO X
            var celsius = new Celsius (parseFloat (valor.num));
@@ -200,11 +197,11 @@
            var kelvin = new Kelvin (parseFloat (valor.num));
            elemento.innerHTML = kelvin.to (valor.output);
          case 'm':  // METERS TO X
-           var meters = new Meters (parseFloat (valor.num));
-           elemento.innerHTML = meters.to (valor.output);
+           var meters = new Meters (valor.num);
+           elemento.innerHTML = meters.toInches () + " Inches";
          case 'i':  // INCES TO X
-           var inches = new Inches (parseFloat (valor.num));
-           elemento.innerHTML = inches.to (valor.output);
+           var inches = new Inches (valor.num);
+           elemento.innerHTML = inches.toMeters () + " Meters";
          default:
            window.alert ("The input value is very strange for me..");
        }
