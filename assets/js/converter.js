@@ -142,22 +142,39 @@
   Longitud.prototype.constructor = Longitud;
 
 
-  function Metros (valor) {
-    Longitud.call (this, valor, "Metros");
+  function Meters (valor) {
+    Longitud.call (this, valor, "Meters");
   }
 
-  Metros.prototype = new Longitud ();
-  Metros.prototype.constructor = Metros;
+  Meters.prototype = new Longitud ();
+  Meters.prototype.constructor = Meters;
 
-  Metros.prototype.toInch = function () {
+  Meters.prototype.toInches = function () {
     return (this.value * 39.3701);
   }
 
+  function Inches (valor) {
+    Longitud.call (this,valor, "Inches");
+  }
 
+  Inches.prototype = new Longitud ();
+  Inches.prototype.constructor = Inches;
+
+  Inches.prototype.toMeters = function () {
+    return (this.value / 39.3701);
+  }
+
+
+  exports.Medida = Medida;
+  
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
   exports.Kelvin = Kelvin;
+
+  exports.Longitud = Longitud;
+  exports.Meters = Meters;
+  exports.Inches = Inches;
 
   exports.convert = function() {
       var valor     = document.getElementById('convert').value,
