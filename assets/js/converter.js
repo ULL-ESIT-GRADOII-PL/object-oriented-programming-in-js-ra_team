@@ -70,7 +70,7 @@
       case 'k':
          return this.toKelvin() + " Kelvin";
       default:
-         window.alert ("Output type it's strange..");
+         return 0;
     }
   }
 
@@ -98,7 +98,7 @@
       case 'k':
          return this.toKelvin() + " Kelvin";
       default:
-         window.alert ("Output type it's strange..");
+         return 0;
     }
   }
 
@@ -120,7 +120,6 @@
   }
 
   Kelvin.prototype.to = function (outputType) {
-    window.alert(outputType);
     switch (outputType.toLowerCase()) {
       case 'c':
          return this.toCelsius() + " Celsius";
@@ -150,15 +149,15 @@
 
        switch (valor.input) {
          case 'c':
-           var celsius = new Celsius(valor.num);
+           var celsius = new Celsius(parseFloat(valor.num));
            elemento.innerHTML = celsius.to (valor.output);
            break;
          case 'f':
-           var farenheit = new Farenheit(valor.num);
+           var farenheit = new Farenheit(parseFloat(valor.num));
            elemento.innerHTML = farenheit.to (valor.output);
            break;
          case 'k':
-           var kelvin = new Kelvin (valor.num);
+           var kelvin = new Kelvin (parseFloat(valor.num));
            elemento.innerHTML = kelvin.to (valor.output);
          default:
            window.alert ("The input value is very strange for me..");
