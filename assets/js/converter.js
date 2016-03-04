@@ -149,6 +149,10 @@
   Metros.prototype = new Longitud ();
   Metros.prototype.constructor = Metros;
 
+  Metros.prototype.toInch = function () {
+    return (this.value * 39.3701);
+  }
+
 
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
