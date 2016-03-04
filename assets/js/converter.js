@@ -64,7 +64,7 @@
   }
 
   Celsius.prototype.to = function (outputType) {
-    switch (outputType) {
+    switch (outputType.toLowerCase()) {
       case 'f':
          return this.toFarenheit() + " Farenheit";
       case 'k':
@@ -92,7 +92,7 @@
   }
 
   Farenheit.prototype.to = function (outputType) {
-    switch (outputType) {
+    switch (outputType.toLowerCase()) {
       case 'c':
          return this.toCelsius() + " Celsius";
       case 'k':
@@ -120,13 +120,14 @@
   }
 
   Kelvin.prototype.to = function (outputType) {
-    switch (outputType) {
+    window.alert(outputType);
+    switch (outputType.toLowerCase()) {
       case 'c':
          return this.toCelsius() + " Celsius";
       case 'f':
          return this.toFarenheit() + " Farenheit";
       default:
-         window.alert ("Output type it's strange..");
+         return 0;
     }
   }
 
