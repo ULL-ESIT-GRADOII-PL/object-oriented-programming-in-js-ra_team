@@ -166,7 +166,7 @@
 
 
   exports.Medida = Medida;
-  
+
   exports.Temperatura = Temperatura;
   exports.Celsius = Celsius;
   exports.Farenheit = Farenheit;
@@ -180,25 +180,31 @@
       var valor     = document.getElementById('convert').value,
       elemento  = document.getElementById('converted'),
       expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-                          '(?<input>    [fkcml])[ ]*                                       # inputTemp \n' +
+                          '(?<input>    [fkcmi])[ ]*                                       # inputTemp \n' +
                           '(?<to>       (?:to)?)[ ]*                                        # to           \n' +
-                          '(?<output>    [fkcml])[ ]*                                       # outputTemp','x' + 'i'),
+                          '(?<output>    [fkcmi])[ ]*                                       # outputTemp','x' + 'i'),
 
       valor = XRegExp.exec(valor, expresion);
       if (valor.length == 6) {
 
        switch (valor.input) {
-         case 'c':
-           var celsius = new Celsius(parseFloat(valor.num));
+         case 'c':  // CELSIUS TO X
+           var celsius = new Celsius (parseFloat (valor.num));
            elemento.innerHTML = celsius.to (valor.output);
            break;
-         case 'f':
-           var farenheit = new Farenheit(parseFloat(valor.num));
+         case 'f':  // FARENHEIT TO X
+           var farenheit = new Farenheit (parseFloat (valor.num));
            elemento.innerHTML = farenheit.to (valor.output);
            break;
-         case 'k':
-           var kelvin = new Kelvin (parseFloat(valor.num));
+         case 'k': // KELVIN TO X
+           var kelvin = new Kelvin (parseFloat (valor.num));
            elemento.innerHTML = kelvin.to (valor.output);
+         case 'm':  // METERS TO X
+           var meters = new Meters (parseFloat (valor.num));
+           elemento.innerHTML = meters.to (valor.output);
+         case 'i':  // INCES TO X
+           var inches = new Inches (parseFloat (valor.num));
+           elemento.innerHTML = inches.to (valor.output);
          default:
            window.alert ("The input value is very strange for me..");
        }
