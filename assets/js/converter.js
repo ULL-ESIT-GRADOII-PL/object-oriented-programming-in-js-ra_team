@@ -1,12 +1,21 @@
 (function(exports) {
     "use strict";
 
-    function Medida(valor, tipo) {
+    function Medida(val, tipo) {
         /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */
-        if (!tipo) {}
-        /* ademas de new Medida(45.2, "Km") */
-        else {
-            this.valor = valor;
+
+        if (val && !tipo) {
+          var regexp = /([+-]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([cfkmi])/i;
+
+          var m = val.match(regexp);
+
+          this.valor = m[1];
+          this.tipo = m[2];
+
+        }
+
+        else if (val && tipo){
+            this.valor = val;
             this.tipo = tipo;
         }
         /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */
@@ -124,7 +133,7 @@
     }
 
     // There we set the inheritance
-    Longitud.prototype = new Medida();
+    Longitud.prototype = new Medida("34c");
     Longitud.prototype.constructor = Longitud;
 
     function Meters(valor) {
@@ -212,10 +221,6 @@
                     elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
             }
         } else
-<<<<<<< 0bc14e36d8ac48bd1a579f12da1fe0e44bd3d12e
             elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
-=======
-            elemento.innerHTML = "";
->>>>>>> JS beautified
     };
 })(this);
