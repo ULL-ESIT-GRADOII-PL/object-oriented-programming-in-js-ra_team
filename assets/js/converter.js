@@ -6,21 +6,13 @@
   function Medida(valor,tipo)
   {
     /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */
-        if(!tipo){
-        //  var expresion = XRegExp('(?<num>   [-+]?[0-9]+(\.[0-9]+)?[ ]*(?:e[+-]?[ ]*[0-9]+)?)[ ]*   # number       \n' +
-        //                          '(?<tipo>    [fkcml])[ ]*                                       # inputTemp \n','x' + 'i');
-
-//          var valor = XRegExp.exec(valor, expresion);
-
-      //    this.valor = valor.num;
-      //    this.tipo = valor.tipo;
-        }
-        /* ademas de new Medida(45.2, "Km") */
-        else{
-          this.valor = valor;
-          this.tipo = tipo;
-        }
-
+    if(!tipo){
+    }
+    /* ademas de new Medida(45.2, "Km") */
+    else{
+		this.valor = valor;
+        this.tipo = tipo;
+    }
     /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */
     /* ademas de new Medida(45.2, "Km") */
   }
