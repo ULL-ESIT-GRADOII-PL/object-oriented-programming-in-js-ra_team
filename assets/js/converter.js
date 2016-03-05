@@ -57,7 +57,7 @@
             case 'k':
                 return this.toKelvin() + " Kelvin";
             default:
-                return 0;
+                return "Input format is incorrect, please read EXAMPLES below.";
         }
     }
 
@@ -212,6 +212,10 @@
                     elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
             }
         } else
+<<<<<<< 0bc14e36d8ac48bd1a579f12da1fe0e44bd3d12e
             elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
+=======
+            elemento.innerHTML = "";
+>>>>>>> JS beautified
     };
 })(this);
