@@ -212,6 +212,6 @@
                     elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
             }
         } else
-            elemento.innerHTML = "";
+            elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below.";
     };
 })(this);
