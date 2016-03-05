@@ -90,7 +90,7 @@
       case 'k':
          return this.toKelvin() + " Kelvin";
       default:
-         return 0;
+         return "Input format is incorrect, please read EXAMPLES below..";
     }
   }
 
@@ -118,7 +118,7 @@
       case 'f':
          return this.toFarenheit() + " Farenheit";
       default:
-         return 0;
+         return "Input format is incorrect, please read EXAMPLES below..";
     }
   }
 
@@ -144,6 +144,15 @@
     return (this.valor * 39.3701);
   }
 
+  Meters.prototype.to = function (outputType) {
+    switch (outputType.toLowerCase()) {
+      case 'i':
+         return this.toInches() + " Inches";
+      default:
+         return "Input format is incorrect, please read EXAMPLES below..";
+    }
+  }
+
   function Inches (valor) {
     Longitud.call (this, valor, "Inches");
   }
@@ -153,6 +162,15 @@
 
   Inches.prototype.toMeters = function () {
     return (this.valor / 39.3701);
+  }
+
+  Inches.prototype.to = function (outputType) {
+    switch (outputType.toLowerCase()) {
+      case 'm':
+         return this.toMeters() + " Meters";
+      default:
+         return "Input format is incorrect, please read EXAMPLES below..";
+    }
   }
 
 
@@ -174,7 +192,7 @@
                           '(?<output>   [fkcmi])[ ]*                                           # outputTemp', 'x' + 'i'),
 
       valor = XRegExp.exec(valor, expresion);
-      if (valor.length == 6) {
+      if (valor) {
        switch (valor.input.toLowerCase()) {
          case 'c':  // CELSIUS TO X
            var celsius = new Celsius (parseFloat (valor.num));
@@ -190,17 +208,17 @@
            break;
          case 'm':  // METERS TO X
            var meters = new Meters (valor.num);
-           elemento.innerHTML = meters.toInches () + " Inches";
+           elemento.innerHTML = meters.to (valor.output);
            break;
          case 'i':  // INCES TO X
            var inches = new Inches (valor.num);
-           elemento.innerHTML = inches.toMeters () + " Meters";
+           elemento.innerHTML = inches.to (valor.output);
            break;
          default:
-           elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below. Thank you very much you are very good friend..";
+           elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below..";
        }
      }
     else
-      elemento.innerHTML = "";
+      elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below..";
   };
 })(this);
