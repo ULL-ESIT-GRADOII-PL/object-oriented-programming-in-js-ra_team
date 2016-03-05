@@ -1,4 +1,6 @@
-# Práctica OOP en JS
+# Práctica: Conversor de medidas utilizando POO con JavaScript
+## ESIT ULL - Grado en Ingeniería Informática - Tercer Curso - Itinerario: Computación
+## Team: Adrián Rodríguez Bazaga (AdrianBZG) & Rudolf Cicko (alu0100824780)
 
 Este repositorio aloja la práctica de conversión de tipos, realizada con html, css y javascript, usando POO y haciendo uso de la herencia en javascript.
 
@@ -7,6 +9,9 @@ Esta aplicación nos permite realizar conversiones de temperatura entre:
 * Celsius
 * Fahrenheit
 
+
+### Despliegue en github.io:
+* [Click aquí](http://adrianbzg.github.io/PL_ObjectOrientedProgramming-in-JS/)
 
 #### Captura ####
 
