@@ -33,8 +33,9 @@ Resultado: 0 errores y 0 warnings.
 #### Rudolf Cicko
   - Email: alu0100824780@ull.edu.es
   - [Página personal](http://alu0100824780.github.io)
+  
 
-#### Vista previa ####
+### Vista previa
 
 ![](http://i.imgur.com/SdCLHfK.png?1)
 
@@ -46,6 +47,7 @@ Además se pueden escribir valores con exponentes: `3.24e-4Cel to K` que convert
 Además se ha implementado la posibilidad de realizar conversiones entre medidas de longitud como metros (meters) y pulgadas (inches): `32m to i`, `420i to m`, `32m i`, `420i m`.
 
 
-**Enlace al campus de la asignatura Procesadores de Lenguages**
+
+**Enlace al campus de la asignatura Procesadores de Lenguages:**
 
 * [Procesadores de Lenguajes](https://campusvirtual.ull.es/1516/course/view.php?id=178)
