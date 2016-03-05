@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
 
-  <meta charset="utf-8">
-  <title>Conversor</title>
-  <meta name="description" content="Conversor de medidas">
+  <meta charset="UTF-8">
+  <title>Measure Converter using OOP with JavaScript - Language Processors</title>
+  <meta name="description" content="Measure Converter">
+  <meta name="keywords" content="HTML,CSS,JavaScript,Converter,Measures,Assignment,OOP,Objects">
+  <meta name="author" content="Adrián Rodríguez Bazaga, Rudolf Cicko">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -12,45 +14,78 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/skeleton.css">
   <link rel="stylesheet" href="assets/css/custom.css">
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="assets/js/conversor.js"></script>
-  
+  <script type="text/javascript" src="assets/js/converter.js"></script>
+  <script type="text/javascript" src="http://xregexp.com/v/3.1.0/xregexp-all.js"></script>
+
+
   <!-- FAVICON
   -------------------------------------------------- -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/images/temperature.ico">
 
 </head>
 <body>
-
+  <header>
+    <div class="row">
+      <h4>Measure Converter</h4>
+    </div>
+  </header>
   <div class="container app">
-    <h4>Conversor</h4>
     <div class="row">
       <div class="one-half column">
-        <p>Este conversor te permite hacer conversiones de Temperaturas (Celsius y Farenheit) Ejemplo: 23C para Celsius.</p>
-        <label>Introduzca un valor</label>
-        <input id="convert" class="u-full-width" type="text" autofocus oninput="convertir();" placeholder="Introduzca un valor">
-        <span id="converted"></span>
+        <label>Enter the input value:</label>
+        <input id="convert" class="u-full-width" type="text" autofocus oninput="convert();" placeholder="32C to F">
+        <span class ="output" id="converted"></span>
+        <p>
+        <br>• <b><u>Usage of this Measure Converter:</u></b>
+        <br>
+        <br> To use the measure converter you just need to write the value, the source measure and the output measure and then press 'Enter' (carriage return) and the converted measure'll be displayed.
+        <br>
+        <br>
+        <br>• <b><u>Types of conversions with examples:</u></b>
+        <br>
+        <br>
+        <b>1.</b> From Celsius to Farenheit or Kelvin (32C to F, 42C to K; 32C F, 42C K)
+        <br>
+        <b>2.</b> From Farenheit to Celsius or Kelvin (32F to C, 42F to K; 32F C, 32F K)
+        <br>
+        <b>3.</b> From Kelvin to Celsius or Farenheit (32K to C, 42K to F; 32K C 42K F)
+        <br>
+        <b>4.</b> From Meters to Inches (32M to I; 32M I)
+        <br>
+        <b>5.</b> From Inches to Meters (32I to M; 32I M)
+        </p>
+
       </div>
+
+<!-- RUDA     -->
+      <tr>
+        <th><span class="output" id="converted"></span></th>
+      </tr>
+<!-- END RUDA -->
     </div>
   </div>
-  
+
   <footer>
       <div class="container">
         <div class="row">
-          <div class="one-half column">
-            <a href="">Repositorio del código</a>
+          <div class="one-third column">
+            <a target="_blank" href="https://github.com/AdrianBZG/PL_ObjectOrientedProgramming-in-JS">GitHub Repo</a>
           </div>
-          <div class="one-half column">
-            <a href="">Web del autor</a>
+          <div class="one-third column">
+            <a target="_blank" href="http://adrianbzg.github.io/">Adrián Rodríguez Bazaga</a>
+          </div>
+          <div class="one-third column">
+            <a target="_blank" href="http://alu0100824780.github.io/">Rudolf Cicko</a>
           </div>
         </div>
       </div>
