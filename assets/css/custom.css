@@ -1,5 +1,5 @@
 html {
-    background-color: #A1D490;
+    background-color: #F0C44D;
 }
 
 body {
@@ -15,7 +15,7 @@ footer {
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: #339612;
+    background-color: #F7B705;
     font-family: "Ubuntu";
 }
 
@@ -34,7 +34,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #339612;
+    background-color: #F7B705;
     padding: 15px 15px;
     display: center;
     height: 60px;
