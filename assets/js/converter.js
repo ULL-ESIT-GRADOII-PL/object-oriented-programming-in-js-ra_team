@@ -197,7 +197,7 @@
            elemento.innerHTML = inches.toMeters () + " Meters";
            break;
          default:
-           window.alert ("The input value is very strange for me..");
+           elemento.innerHTML = "Input format is incorrect, please read EXAMPLES below. Thank you very much you are very good friend..";
        }
      }
     else
