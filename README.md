@@ -26,6 +26,7 @@ Resultado: 0 errores y 0 warnings.
 
 ### Métricas JSHint (http://jshint.com/)
 Resultado: 0 errores y 0 warnings.
+
 ![JSHint Metricas](http://i.imgur.com/4zDVjyW.png?1 "JSHint Metricas")
 
 ### Desarrolladores
