@@ -25,7 +25,8 @@ Resultado: 0 errores y 0 warnings.
 ![W3 Validation](http://i.imgur.com/hqHRNup.png?1 "W3 Validation")
 
 ### Métricas JSHint (http://jshint.com/)
-Resultado: 0 errores y 14 warnings sin sentido (dice que falta un ; pero no es verdad), realmente son 0 warnings.
+Resultado: 0 errores y 0 warnings.
+
 ![JSHint Metricas](http://i.imgur.com/4zDVjyW.png?1 "JSHint Metricas")
 
 ### Desarrolladores

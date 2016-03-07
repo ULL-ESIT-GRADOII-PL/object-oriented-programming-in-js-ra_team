@@ -26,11 +26,11 @@
 
     Medida.prototype.getValue = function() {
         return this.valor;
-    }
+    };
 
     Medida.prototype.getType = function() {
         return this.type;
-    }
+    };
 
 
 
@@ -53,11 +53,11 @@
 
     Celsius.prototype.toFarenheit = function() {
         return (this.valor * 1.8 + 32);
-    }
+    };
 
     Celsius.prototype.toKelvin = function() {
         return (this.valor + 273.15);
-    }
+    };
 
     Celsius.prototype.to = function(outputType) {
         switch (outputType.toLowerCase()) {
@@ -68,7 +68,7 @@
             default:
                 return "Input format is incorrect, please read EXAMPLES below.";
         }
-    }
+    };
 
 
     function Farenheit(valor) {
@@ -81,11 +81,11 @@
 
     Farenheit.prototype.toCelsius = function() {
         return (this.valor - 32) * 5 / 9;
-    }
+    };
 
     Farenheit.prototype.toKelvin = function() {
         return (5 * (this.valor - 32) / 9) + 273.15;
-    }
+    };
 
     Farenheit.prototype.to = function(outputType) {
         switch (outputType.toLowerCase()) {
@@ -96,7 +96,7 @@
             default:
                 return "Input format is incorrect, please read EXAMPLES below.";
         }
-    }
+    };
 
 
     function Kelvin(valor) {
@@ -109,11 +109,11 @@
 
     Kelvin.prototype.toCelsius = function() {
         return (this.valor - 273.15);
-    }
+    };
 
     Kelvin.prototype.toFarenheit = function() {
         return ((this.valor * 1.8) - 459.67);
-    }
+    };
 
     Kelvin.prototype.to = function(outputType) {
         switch (outputType.toLowerCase()) {
@@ -124,7 +124,7 @@
             default:
                 return "Input format is incorrect, please read EXAMPLES below.";
         }
-    }
+    };
 
 
 
@@ -145,7 +145,7 @@
 
     Meters.prototype.toInches = function() {
         return (this.valor * 39.3701);
-    }
+    };
 
     Meters.prototype.to = function(outputType) {
         switch (outputType.toLowerCase()) {
@@ -154,7 +154,7 @@
             default:
                 return "Input format is incorrect, please read EXAMPLES below.";
         }
-    }
+    };
 
     function Inches(valor) {
         Longitud.call(this, valor, "Inches");
@@ -165,7 +165,7 @@
 
     Inches.prototype.toMeters = function() {
         return (this.valor / 39.3701);
-    }
+    };
 
     Inches.prototype.to = function(outputType) {
         switch (outputType.toLowerCase()) {
@@ -174,7 +174,7 @@
             default:
                 return "Input format is incorrect, please read EXAMPLES below.";
         }
-    }
+    };
 
 
     exports.Temperatura = Temperatura;
